@@ -1,0 +1,48 @@
+Comtrade QA - Završni projekat
+Zadaci
+Testira se sajt: https://comtradeqa.herokuapp.com
+Napisati Test Scenario za testiranje Registracije
+Napisati Test Scenario za testiranje Login-a
+Napisati Test Scenario za testiranje LogOut-a
+Napisati Test Slučajeve (Test Case) za svaki od Test Scenarija
+Bez otvaranja sajta testirati da li je sajt aktivan. Za timeout staviti 10 sekundi
+Login
+Za login se koristi email i šifra. Kada se korisnik uspešno uloguje vraćen je na početnu stranicu, i trebalo bi da se prikaže
+nasumičan mim.
+Logout
+Logout se dešava pritiskom na dugme Odjavi Se.
+Register
+Ukoliko je registracija uspešna, sajt Vas prebacuje na stranicu login.
+Bonus
+Testiranje API-a.
+Testirati API poziv za registraciju
+Endpoint je [POST] https://comtradeqa.herokuapp.com/api/users/add
+Telo zahteva u JSON formatu:
+ {
+ "username":"someUsername",
+ "password":"somePassword",
+ "email":"someemail"
+ }
+Ukoliko isti email već postoji API vraća status kod 409
+Ukoliko dođe do neke neočekivane greške vraća se kod 5xx
+Ukoliko je registracija uspešna vraća status kod 201
+Testirati API poziv za Login
+-Prilikom logina, API vraća JWT (Json Web Token)
+projekat.md 5/19/2021
+2 / 2
+Endpoint je [POST] https://comtradeqa.herokuapp.com/api/users/login
+Zahtev je u JSON formatu:
+{
+“email”:”someEmail”,
+“password”:somePassword”
+}
+Ako email ne postoji ili je šifra pogrešna vraća se kod 401.
+Ako je uspešan login vraća se kod 200 i JWT (JSON WEB TOKEN)
+Ispisati JWT na ekranu
+Bonus na bonus
+Prilikom logovanja, pritisnite dugme "Novi Meme!"
+Napomena
+Ne koristiti svoje imejl adrese i šifre zbog sigurnosti!
+Testiranje API-a raditi pomoću biblioteke requests
+Testiranje API-a je takođe moguće raditi preko postmana. U ovom slučaju sačivati sve zahteve u jednu kolekciju i istu
+eksportovati.

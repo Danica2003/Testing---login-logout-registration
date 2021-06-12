@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "b5b8e1e3-83d0-48a8-9a1f-7d23ea043fbc",
+		"name": "API TEST",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://comtradeqa.herokuapp.com/api/users/add",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ncocozza0@guardian.co.uk\",\r\n    \"password\": \"8qRh83jtBUu\",\r\n    \"username\": \"hkilfeather0\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://comtradeqa.herokuapp.com/api/users/add",
+					"protocol": "https",
+					"host": [
+						"comtradeqa",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://comtradeqa.herokuapp.com/api/users/login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ncocozza0@guardian.co.uk\",\r\n    \"password\": \"8qRh83jtBUu\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://comtradeqa.herokuapp.com/api/users/login",
+					"protocol": "https",
+					"host": [
+						"comtradeqa",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
